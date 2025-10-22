@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
+import BillingPage from "./pages/BillingPage";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -11,7 +12,7 @@ function App() {
   const renderContent = () => {
     switch (activeMenu) {
       case "Dashboard":
-        return <h2 className="text-gray-700 text-xl">Welcome to Dashboard</h2>;
+        return <BillingPage />;
       case "Master Data":
         return <h2 className="text-gray-700 text-xl">Master Data Content</h2>;
       case "Settings":
